@@ -69,7 +69,7 @@ class Address(models.Model):
     city = models.CharField(max_length=255)
     # customer - one to many relationship
     customer = models.ForeignKey(
-        Customer, on_delete=models.CASCADE)  # previously, it was models.OneToOneField(Customer, on_delete=models.CASCADE) in one to one relationship...
+        Customer, on_delete=models.CASCADE)  # previously, it was models.OneToOneField(Customer, on_delete=models.CASCADE, primary_key=True) in one to one relationship...
 
 
 class Cart(models.Model):
